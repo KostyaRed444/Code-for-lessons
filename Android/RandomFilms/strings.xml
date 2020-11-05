@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name"/>
+    <string-array name="films">
+    <item>Унесённые призраками</item>
+    <item>Рыбка Поньо</item>
+    <item>Ведьмина служба доставки</item>
+    <item>Принцесса Мононоке</item>
+    <item>Навсикая из долины ветров</item>
+    </string-array>
+</resources>
