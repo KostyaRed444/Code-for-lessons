@@ -1,0 +1,32 @@
+{
+  "movies": [
+    {
+      "Title": "Alien",
+      "Year": "1979",
+      "Rated": "+18",
+      "Runtime": "117 min",
+      "Genre": "Horror"
+    },
+    {
+      "Title": "Avatar",
+      "Year": "2009",
+      "Rated": "+12",
+      "Runtime": "162 min",
+      "Genre": "Fantasy"
+    },
+    {
+      "Title": "WALL-E",
+      "Year": "2008",
+      "Rated": "none",
+      "Runtime": "98 min",
+      "Genre": "Fantasy"
+    },
+    {
+      "Title": "Transformers",
+      "Year": "2007",
+      "Rated": "+18",
+      "Runtime": "143 min",
+      "Genre": "Action"
+    }
+  ]
+}
