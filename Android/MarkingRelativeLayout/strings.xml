@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name"/>
+    <string-array name="citiesOut">
+        <item>Иркутск</item>
+        <item>Ангарск</item>
+    </string-array>
+    <string-array name="citiesIn">
+        <item>Москва</item>
+        <item>Киото</item>
+        <item>Шанхай</item>
+        <item>Рио-де-Жанейро</item>
+        <item>Нью-Йорк</item>
+        <item>Лондон</item>
+    </string-array>
+</resources>

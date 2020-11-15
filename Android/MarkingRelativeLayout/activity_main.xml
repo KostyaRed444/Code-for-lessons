@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="52dp">
+
+    <RelativeLayout
+        android:id="@+id/Part1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/City"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="City"
+            android:textColor="@android:color/background_light"
+            android:textSize="56dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:layout_below="@+id/City"
+            android:layout_centerHorizontal="true">
+
+            <Spinner
+                android:id="@+id/citiesOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_weight="1"
+                android:background="@color/colorLightBlue"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:padding="3dp"
+                android:layout_margin="3dp"
+                android:spinnerMode="dropdown"
+                android:textColor="@android:color/background_light"
+                android:textSize="42dp" />
+
+            <Spinner
+                android:id="@+id/citiesIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:layout_alignParentRight="true"
+                android:padding="3dp"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@color/colorLightBlue"
+                android:textColor="@android:color/background_light"
+                android:textSize="42dp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+    android:id="@+id/Part2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:layout_below="@+id/Part1">
+    <TextView
+        android:id="@+id/Date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Date"
+        android:textSize="56dp"
+        android:textColor="@android:color/background_light"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_below="@+id/Date"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="3dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@color/colorLightBlue"
+            android:hint="Input date and time"
+            android:inputType="datetime"
+            android:textSize="28dp"
+            android:textColor="@android:color/background_light" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="3dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@color/colorLightBlue"
+            android:hint="Input date and time"
+            android:inputType="datetime"
+            android:textSize="28dp"
+            android:textColor="@android:color/background_light"/>
+
+    </RelativeLayout>
+</RelativeLayout>
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@+id/Part2">
+    <TextView
+        android:id="@+id/Pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Passengers"
+        android:textSize="56dp"
+        android:textColor="@android:color/background_light"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Pass"
+        android:layout_marginTop="8dp"
+        android:layout_weight="0">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="0"
+            >
+
+            <TextView
+                android:id="@+id/Adults"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_margin="3dp"
+                android:text="Adults"
+                android:textSize="38dp"
+                android:textColor="@android:color/background_light"/>
+            <TextView
+                android:id="@+id/Kids"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_margin="3dp"
+                android:layout_below="@+id/Adults"
+                android:layout_weight="1"
+                android:text="Kids"
+                android:textSize="38dp"
+                android:textColor="@android:color/background_light"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_margin="3dp"
+                android:layout_below="@+id/Kids"
+                android:layout_weight="1"
+                android:text="Babies"
+                android:textSize="38dp"
+                android:textColor="@android:color/background_light"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_weight="0"
+            >
+
+        <EditText
+            android:id="@+id/One"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:background="@color/colorLightBlue"
+            android:hint="Input count passengers"
+            android:inputType="number"
+            android:textSize="28dp"
+            android:textColor="@android:color/background_light"/>
+
+        <EditText
+            android:id="@+id/Two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/One"
+            android:layout_weight="1"
+            android:background="@color/colorLightBlue"
+            android:hint="Input count passengers"
+            android:inputType="number"
+            android:textSize="28dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/Two"
+            android:layout_weight="1"
+            android:background="@color/colorLightBlue"
+            android:hint="Input count passengers"
+            android:inputType="number"
+            android:textSize="28dp"/>
+    </RelativeLayout>
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/resert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@android:drawable/button_onoff_indicator_off"
+        android:onClick="find"
+        android:text="find"
+        android:textColor="@android:color/holo_blue_light" />
+</RelativeLayout>
+
+</RelativeLayout>
