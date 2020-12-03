@@ -1,31 +1,37 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Dec  3 20:15:43 2020
+Created on Thu Dec  3 20:35:41 2020
 
-@author: Kostya
+@author: 1052126
 """
-import codecs,socket
-import requests
-import pythonwhois
-import threading
-from datetime import datetime, date, time
-f=codecs.open( "register.txt", "r", "utf_8_sig" )
+
+import codecs, socket
+f=codecs.open("register.txt","r")
 reg=[]
 for i in f:
-    i=list(i.strip().split(";"))
-    for j in i:
-        if j.find("https")!=-1:
-            domain=j.split("//")[-1].split("/")[0]
-            reg.append(domain)
-
-print(len(reg))
-threads = []
-for i in reg:
-    details = pythonwhois.get_whois(i)
-    if 'expiration_date' in details:
-        print(i)
-        if datetime.date(datetime.now())>datetime.date(details['expiration_date'][0]):
-            print("You can buy it")
-        else:
-            print("You can't buy it(((")
-            print(datetime.date(details['expiration_date'][0]))
+    reg.append(list(i.strip().split(";")))
+    
+for c, us_url in enumerate(reg):
+    domain=us_url[2].split("//")[-1].split("/")[0]
+    print(domain, end=" - ")
+    ip_domain=None
+    try:
+        ip_domain=True if socket.gethostbyname(domain) else False
+        flag=1
+        for i in reg:
+            if (us_url in i) or (domain in i) or (ip_domain in i) or (ip_domain==False):
+                flag=0
+                print("BLOCED/n")
+                print("----------------------------")
+                break
+            if flag==1:
+                print("GOOD........./n")
+                print("----------------------------")
+                break
+    except Exception as e:
+        print("GOOD/n")
+        print("----------------------------")
+        pass
+    if c==500:
+        break
+        
