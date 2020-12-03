@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Dec  3 19:31:54 2020
+Created on Thu Dec  3 21:17:37 2020
 
-@author: Kostya
+@author: 1052126
 """
-import codecs,socket
+
+import codecs, socket
 f=codecs.open( "register.txt", "r", "utf_8_sig" )
 reg=[]
 for i in f:
