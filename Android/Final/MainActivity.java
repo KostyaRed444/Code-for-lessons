@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        listView = findViewById(R.id.list);
 
         listLang=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, languages);
         listLang.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
