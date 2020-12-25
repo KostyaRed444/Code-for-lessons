@@ -2,13 +2,12 @@ package com.example.afinal;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -25,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
             .build();
 
     AzureTranslationAPI api=retrofit.create(AzureTranslationAPI.class);
+    ArrayList<String> languages=new ArrayList<>();
+    ArrayAdapter<String> listLang;
     ListView listView;
 
     @Override
@@ -33,10 +34,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         listView = findViewById(R.id.list);
 
-        Call<Translation> call=api.getLanguages(); //ArrayList
-        call.enqueue(new LanguagesCallback());
-        ArrayAdapter<String> listLang= new ArrayAdapter<String>(this, R.layout.activity_main, (List<String>) call);
-        listView.setAdapter(listLang);
+        listLang=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, languages);
+        listLang.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+
+       Call<Translation> call=api.getLanguages();
+       call.enqueue(new LanguagesCallback());
+
    }
 
    //ответ от системы
