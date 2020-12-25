@@ -8,6 +8,8 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         Call<Translation> call=api.getLanguages(); //ArrayList
         call.enqueue(new LanguagesCallback());
-        ArrayAdapter<String> listLang= new ArrayAdapter<String>(this, R.layout.activity_main);
+        ArrayAdapter<String> listLang= new ArrayAdapter<String>(this, R.layout.activity_main, (List<String>) call);
         listView.setAdapter(listLang);
    }
 
